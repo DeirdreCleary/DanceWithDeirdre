@@ -1,0 +1,81 @@
+// @import "..\node_modules\font-awesome\scss\font-awesome.scss";
+
+$primary: #FDD800 !default
+$fadedprimary: #FFEE70
+
+// Responsiveness
+// 960, 1152, and 1344 have been chosen because they are divisible by both 12 and 16
+$tablet: 769px !default
+// 960px container + 40px
+$desktop: 1000px !default
+// 1152px container + 40
+$widescreen: 1192px !default
+// 1344px container + 40
+$fullhd: 1384px !default
+
+=mobile
+  @media screen and (max-width: $tablet - 1px)
+    @content
+
+=tablet
+  @media screen and (min-width: $tablet), print
+    @content
+
+=tablet-only
+  @media screen and (min-width: $tablet) and (max-width: $desktop - 1px)
+    @content
+
+=desktop
+  @media screen and (min-width: $desktop)
+    @content
+
+=desktop-only
+  @media screen and (min-width: $desktop) and (max-width: $widescreen - 1px)
+    @content
+
+
+/* The button
+
+.addeventatc
+  border: none
+  margin-top: 1em
+  position: relative
+  text-align: center
+  background: black
+  color: #fff !important
+
+  &:hover
+    color: black !important
+    text-decoration: none
+    background-color: $primary
+
+.addeventatc
+  .start, .end, .timezone, .title, .description, .location, .date_format, .recurring
+    display: none !important
+
+/* Drop down
+
+.addeventatc_dropdown
+  width: 230px
+  position: absolute
+  color: #000 !important
+  line-height: 100%
+  background: #fff
+  font-size: 15px
+  text-align: left
+  display: none
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 10px 26px
+
+  span
+    display: block
+    line-height: 100%
+    cursor: pointer
+    font-size: 15px
+    color: #333
+    font-weight: 600
+    padding: 14px 10px 14px 10px
+    margin: -2px 0px
+
+    &:hover
+      background-color: #f4f4f4
+      color: #000

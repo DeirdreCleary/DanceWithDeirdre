@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <title>Dance With Deirdre</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script type="text/javascript">
+      window.addeventasync = function() {
+        addeventatc.settings({
+          css: false,
+          appleical: { show: true, text: "Apple Calendar" },
+          google: { show: true, text: "Google Calendar" },
+          office365: { show: true, text: "Office 365" },
+          outlook: { show: true, text: "Outlook" },
+          outlookcom: { show: true, text: "Outlook.com" },
+          yahoo: { show: false }
+        });
+      };
+    </script>
+    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+  </head>
+  <body>
+    <div name="hiddenForm" hidden>
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+      >
+        <p hidden class="is-hidden">
+          <label
+            >Don’t fill this out if you're human: <input name="bot-field"
+          /></label>
+        </p>
+
+        <input name="name" type="text" />
+        <input name="email" type="email" />
+        <textarea name="message"> </textarea>
+        <button class="button is-link">Submit</button>
+      </form>
+    </div>
+    <noscript>
+      <strong
+        >We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work
+        properly without JavaScript enabled. Please enable it to
+        continue.</strong
+      >
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
